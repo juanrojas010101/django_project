@@ -102,7 +102,7 @@ class Reclamo(models.Model):
     idPacienteR = models.BigIntegerField()
     idMedico = models.BigIntegerField()
     
-class Tipo(models.Models):
+class Tipo(models.Model):
     codTipoReclamo = models.IntegerField()
     tipoReclamo = models.CharField(max_length=30)
     
