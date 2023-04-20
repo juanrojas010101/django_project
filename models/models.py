@@ -12,6 +12,7 @@ class Medico(models.Model):
     codEspecialidadM = models.IntegerField()
 
 class Especialidad(models.Model):
+    Medico = models.ForeignKey(Medico, on_delete=models.CASCADE)
     codEspecialidad = models.BigIntegerField()
     Especialidad = models.CharField(max_length=30)
     
@@ -26,6 +27,7 @@ class Servicio(models.Model):
     idMedicoC = models.IntegerField()
 
 class TipoServicio(models.Model):
+    Servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
     codTipoCita = models.BigIntegerField()
     tipoCita = models.BigIntegerField()
     
@@ -65,14 +67,6 @@ class Producto(models.Model):
     cantidadProd = models.IntegerField()
     precioProd = models.IntegerField()
     
-class HistorialClinico(models.Model):
-    codigoHistorial = models.BigIntegerField()
-    descripcionEventos = models.TextField()
-    codAlergiaH = models.IntegerField()
-    codMedicamentosH = models.IntegerField()
-    codEnfermedadesH = models.IntegerField()
-    codExamenesH = models.IntegerField()
-    idPacienteH = models.IntegerField()
     
 class Alergias(models.Model):
     codAlergia = models.BigIntegerField()
