@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+from rest_framework.generics import DestroyAPIView
+from models.models import Medico
+from models.serializers import MedicoSerializer
+
+class EliminarMedico(DestroyAPIView):
+    queryset = Medico.objects.all()
+    serializer_class = MedicoSerializer
+    lookup_field = 'pk'

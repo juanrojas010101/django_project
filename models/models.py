@@ -11,7 +11,3 @@ class Medico(models.Model):
     hojaDeVidaMed = models.BinaryField()
     codEspecialidadM = models.IntegerField()
 
-class Especialidad(models.Model):
-    Medico = models.ForeignKey(Medico, on_delete=models.CASCADE)
-    codEspecialidad = models.BigIntegerField()
-    Especialidad = models.CharField(max_length=30)
