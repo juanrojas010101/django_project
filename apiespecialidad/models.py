@@ -4,4 +4,4 @@ from django.db import models
 
 class Especialidad(models.Model):
     codEspecialidad = models.BigIntegerField(primary_key=True)
-    especialidad = models.CharField(max_length=30)
+    especialidad = models.CharField(max_length=35)
