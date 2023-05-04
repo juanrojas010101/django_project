@@ -8,7 +8,7 @@ class Paciente(models.Model):
     nombrePac = models.CharField(max_length=15)
     apellidoPac =  models.CharField(max_length=15)
     edadPac = models.IntegerField()
-    telefonoPac = models.IntegerField()
+    telefonoPac = models.CharField(max_length=10)
     correoPac = models.EmailField()
     direccionPac = models.CharField(max_length=30)
 
