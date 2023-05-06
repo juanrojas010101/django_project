@@ -7,6 +7,8 @@ from apipaciente.serializers import PacienteSerializer
 from rest_framework.generics import RetrieveUpdateAPIView
 
 
+
+
 class EliminarMiModelo(DestroyAPIView):
     queryset = Paciente.objects.all()
     serializer_class = PacienteSerializer
@@ -16,3 +18,4 @@ class ActualizarPaciente(RetrieveUpdateAPIView):
     queryset = Paciente.objects.all()
     serializer_class = PacienteSerializer
     lookup_field = 'pk'
+

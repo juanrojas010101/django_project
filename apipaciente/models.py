@@ -11,4 +11,4 @@ class Paciente(models.Model):
     correoPac = models.EmailField()
     direccionPac = models.CharField(max_length=30)
 
-   
+
