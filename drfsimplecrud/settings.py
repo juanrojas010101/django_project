@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'models',
     'apipaciente',
     'apiespecialidad',
-    'django-cities',
 ]
 
 MIDDLEWARE = [

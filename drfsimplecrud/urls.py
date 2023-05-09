@@ -21,6 +21,7 @@ from models.views import EliminarMedico
 from apipaciente.views import ActualizarPaciente
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('projects.urls')),
@@ -30,7 +31,8 @@ urlpatterns = [
     path('eliminarPaciente/<int:pk>/', EliminarMiModelo.as_view(), name='eliminar_mimodelo'),
     path('eliminarEspecialidad/<int:pk>/', EliminarEspecialidad.as_view(), name='eliminar_mimodelo'),
     path('eliminarMedico/<int:pk>/', EliminarMedico.as_view(), name='eliminar_mimodelo'),
-     path('articulos/<int:pk>/', ActualizarPaciente.as_view(), name='ver-actualizar-articulo'),
+    path('articulos/<int:pk>/', ActualizarPaciente.as_view(), name='ver-actualizar-articulo'),
+
 ]
    
 
