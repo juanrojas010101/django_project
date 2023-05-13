@@ -9,7 +9,6 @@ with open('apipaciente/ciudades.json', 'r') as f:
 
 opciones_ciudades = ciudad['opciones_ciudades']
 
-
 class Paciente(models.Model):
     idPaciente = models.IntegerField(primary_key=True)
     NombreCompletoPac = models.CharField(max_length=90)
