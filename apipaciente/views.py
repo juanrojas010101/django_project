@@ -8,8 +8,7 @@ from rest_framework.generics import RetrieveUpdateAPIView
 
 
 
-
-class EliminarMiModelo(DestroyAPIView):
+class EliminarPaciente(DestroyAPIView):
     queryset = Paciente.objects.all()
     serializer_class = PacienteSerializer
     lookup_field = 'pk'

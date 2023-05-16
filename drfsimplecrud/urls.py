@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from apipaciente.views import EliminarMiModelo
 from apiespecialidad.views import EliminarEspecialidad
 from models.views import EliminarMedico
+from models.views import ActualizarMedico
 from apipaciente.views import ActualizarPaciente
+from apipaciente.views import EliminarPaciente
+from apiespecialidad.views import ActualizarEspecialidad
 
 
 urlpatterns = [
@@ -27,10 +29,12 @@ urlpatterns = [
     path('models/', include('models.urlsModels')),
     path('paciente/', include('apipaciente.urlspaciente')),
     path('especialidad/', include('apiespecialidad.urlsespecialidad')),
-    path('eliminarPaciente/<int:pk>/', EliminarMiModelo.as_view(), name='eliminar_mimodelo'),
+    path('eliminarPaciente/<int:pk>/', EliminarPaciente.as_view(), name='eliminar_mimodelo'),
+    path('actualizarPaciente/<int:pk>/', ActualizarMedico.as_view(), name='ver-actualizar-articulo'),
     path('eliminarEspecialidad/<int:pk>/', EliminarEspecialidad.as_view(), name='eliminar_mimodelo'),
+    path('articulos/<int:pk>/', ActualizarEspecialidad.as_view(), name='ver-actualizar-articulo'),
     path('eliminarMedico/<int:pk>/', EliminarMedico.as_view(), name='eliminar_mimodelo'),
-     path('articulos/<int:pk>/', ActualizarPaciente.as_view(), name='ver-actualizar-articulo'),
+    path('articulos/<int:pk>/', ActualizarPaciente.as_view(), name='ver-actualizar-articulo'),
 ]
    
 
