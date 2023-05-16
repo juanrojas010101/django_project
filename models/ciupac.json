@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "opciones_ciupac": [ ["Bogotá", "Medellín"],
+=======
+    "opciones_ciudades": [ ["Bogotá", "Medellín"],
+>>>>>>> 739df87cc2caddf09db554ecb99d4d94c314ac5e
         ["Cali", "Barranquilla"],
         ["Cartagena", "Cúcuta"],
         ["Bucaramanga", "Pereira"],
@@ -13,4 +17,9 @@
         ["Florencia", "Yopal"],
         ["Mocoa", "San Andrés"]
     ]
+<<<<<<< HEAD
   }
+=======
+  }
+  
+>>>>>>> 739df87cc2caddf09db554ecb99d4d94c314ac5e

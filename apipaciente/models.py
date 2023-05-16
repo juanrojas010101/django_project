@@ -18,6 +18,13 @@ class Paciente(models.Model):
     telefonoPac = models.CharField(max_length=10)
     correoPac = models.EmailField()
     direccionPac = models.CharField(max_length=30)
+<<<<<<< HEAD
     ciudadPac = models.CharField(max_length=100, choices=opciones_ciudades)
+=======
+    ciudad = models.CharField(max_length=350, choices=opciones_ciudades)
+
+
+
+>>>>>>> 739df87cc2caddf09db554ecb99d4d94c314ac5e
 
 
