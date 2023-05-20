@@ -36,6 +36,14 @@ RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:   
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
+CORS_ORIGIN_CREDENTIALS = True
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,6 +58,7 @@ INSTALLED_APPS = [
     'models',
     'apipaciente',
     'apiespecialidad',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +70,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'drfsimplecrud.urls'
