@@ -41,6 +41,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'https://stunning-palmier-cd959b.netlify.app'
 ]
 CORS_ORIGIN_CREDENTIALS = True
 
