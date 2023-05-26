@@ -21,6 +21,7 @@ from models.views import ActualizarMedico
 from apipaciente.views import ActualizarPaciente
 from apipaciente.views import EliminarPaciente
 from apiespecialidad.views import ActualizarEspecialidad
+from ciudades.views import cargar_datos_desde_json
 
 
 urlpatterns = [
@@ -29,6 +30,8 @@ urlpatterns = [
     path('models/', include('models.urlsModels')),
     path('paciente/', include('apipaciente.urlspaciente')),
     path('especialidad/', include('apiespecialidad.urlsespecialidad')),
+    path('ciudades/', include('ciudades.urlsciudad')),
+    path('cargar-datos/', cargar_datos_desde_json, name='cargar_datos'),
     path('eliminarPaciente/<int:pk>/', EliminarPaciente.as_view(), name='eliminar_mimodelo'),
     path('actualizarPaciente/<int:pk>/', ActualizarMedico.as_view(), name='ver-actualizar-articulo'),
     path('eliminarEspecialidad/<int:pk>/', EliminarEspecialidad.as_view(), name='eliminar_mimodelo'),

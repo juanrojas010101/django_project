@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'apipaciente',
     'apiespecialidad',
     'corsheaders',
+    'ciudades',
 ]
 
 MIDDLEWARE = [
