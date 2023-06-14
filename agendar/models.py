@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Agendar(models.Model):
-    IdEspecialista = models.IntegerField(null=True)
-    IdMedico = models.IntegerField(null=True)
+    IdEspecialista = models.CharField(max_length=90)
+    IdMedico = models.CharField(max_length=90)
     Fecha = models.DateField()
     Motivo = models.TextField()
     Hora = models.TimeField()

@@ -10,5 +10,6 @@ class Medico(models.Model):
     correoMed = models.EmailField(null=True)
     ciudadMed = models.CharField(max_length=90)
     IdEspecialidad = models.CharField(max_length=80)
+    IdCiudad = models.CharField(max_length=90)
 
 

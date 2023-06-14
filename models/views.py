@@ -41,38 +41,38 @@ class ActualizarMedico(RetrieveUpdateAPIView):
 
 #      return JsonResponse(resultados, safe=False)
 
-from models.models import Medico
-from django.db.models import Q
-from django.http import JsonResponse
+# from models.models import Medico
+# from django.db.models import Q
+# from django.http import JsonResponse
 
-def consulta_medicos(request):
-    id_especialista = request.GET.get('IdEspecialista')
-    id_medico = request.GET.get('IdMedico')
-    nombre_medico = request.GET.get('NombreCompletoMed')
-    numero_tarjeta = request.GET.get('NumeroTarjetaMed')
+# def consulta_medicos(request):
+#     id_especialista = request.GET.get('IdEspecialista')
+#     id_medico = request.GET.get('IdMedico')
+#     nombre_medico = request.GET.get('NombreCompletoMed')
+#     numero_tarjeta = request.GET.get('NumeroTarjetaMed')
 
-    queryset = Medico.objects.all()
+#     queryset = Medico.objects.all()
 
-    if id_especialista:
-        queryset = queryset.filter(IdEspecialista=id_especialista)
+#     if id_especialista:
+#         queryset = queryset.filter(IdEspecialista=id_especialista)
 
-    if id_medico:
-        queryset = queryset.filter(IdMedico=id_medico)
+#     if id_medico:
+#         queryset = queryset.filter(IdMedico=id_medico)
 
-    queryset = queryset.filter(
-        Q(NombreCompletoMed=nombre_medico) | Q(NumeroTarjetaMed=numero_tarjeta)
-    )
+#     queryset = queryset.filter(
+#         Q(NombreCompletoMed=nombre_medico) | Q(NumeroTarjetaMed=numero_tarjeta)
+#     )
 
-    resultados = [
-        {
-            'idMedico': medico.idMedico,
-            'NombreCompletoMed': medico.NombreCompletoMed,
-            'NumeroTarjetaMed': medico.NumeroTarjetaMed
-            # Agrega otros campos según tus necesidades
-        }
-        for medico in queryset
-    ]
+#     resultados = [
+#         {
+#             'idMedico': medico.idMedico,
+#             'NombreCompletoMed': medico.NombreCompletoMed,
+#             'NumeroTarjetaMed': medico.NumeroTarjetaMed
+#             # Agrega otros campos según tus necesidades
+#         }
+#         for medico in queryset
+#     ]
 
-    return JsonResponse(resultados, safe=False)
+#     return JsonResponse(resultados, safe=False)
 
 

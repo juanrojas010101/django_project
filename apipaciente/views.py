@@ -1,9 +1,7 @@
 from django.shortcuts import render
-
 from rest_framework.generics import DestroyAPIView
 from apipaciente.models import Paciente
 from apipaciente.serializers import PacienteSerializer
-
 from rest_framework.generics import RetrieveUpdateAPIView
 
 

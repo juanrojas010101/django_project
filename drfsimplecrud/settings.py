@@ -62,6 +62,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'ciudades',
     'agendar',
+    'login',
+    'knox',
 ]
 
 MIDDLEWARE = [
@@ -127,10 +129,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-AUTHENTICATION_BACKENDS = [
-    
-    'django.contrib.auto.backends.ModelBack',
-]
+
 
 
 
@@ -163,5 +162,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
 'DEFAULT_AUTHENTICATION_CLASSES': (
     'rest_framework.authentication.SessionAuthentication',
+    # 'rest_framework.authentication.BasicAuthentication',
+    # 'rest_framework.authentication.SessionAuthentication',
+    'knox.auth.TokenAuthentication',
 ),
 }
