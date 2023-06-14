@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'apiespecialidad',
     'corsheaders',
     'ciudades',
+    'agendar',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +127,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+AUTHENTICATION_BACKENDS = [
+    
+    'django.contrib.auto.backends.ModelBack',
+]
+
 
 
 # Internationalization

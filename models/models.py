@@ -8,6 +8,7 @@ class Medico(models.Model):
     cedulaMed = models.IntegerField(null=True)
     telefonoMed = models.CharField(max_length=10)
     correoMed = models.EmailField(null=True)
-
+    ciudadMed = models.CharField(max_length=90)
+    IdEspecialidad = models.CharField(max_length=80)
 
 

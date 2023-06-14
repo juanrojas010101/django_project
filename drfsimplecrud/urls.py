@@ -22,15 +22,22 @@ from apipaciente.views import ActualizarPaciente
 from apipaciente.views import EliminarPaciente
 from apiespecialidad.views import ActualizarEspecialidad
 from ciudades.views import cargar_datos_desde_json
-
+#from models import views
+#from models.views import obtener_ids
+#from projects.views import obtener_registros
+from models.views import consulta_medicos
+from django.urls import path 
+#from login.views import login_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('projects.urls')),
     path('models/', include('models.urlsModels')),
+    path('agendar/', include('agendar.urls')),
     path('paciente/', include('apipaciente.urlspaciente')),
     path('especialidad/', include('apiespecialidad.urlsespecialidad')),
     path('ciudades/', include('ciudades.urlsciudad')),
+    path('consulta/', consulta_medicos, name='consulta_medicos'),
     path('cargar-datos/', cargar_datos_desde_json, name='cargar_datos'),
     path('eliminarPaciente/<int:pk>/', EliminarPaciente.as_view(), name='eliminar_mimodelo'),
     path('actualizarPaciente/<int:pk>/', ActualizarMedico.as_view(), name='ver-actualizar-articulo'),
@@ -38,6 +45,7 @@ urlpatterns = [
     path('articulos/<int:pk>/', ActualizarEspecialidad.as_view(), name='ver-actualizar-articulo'),
     path('eliminarMedico/<int:pk>/', EliminarMedico.as_view(), name='eliminar_mimodelo'),
     path('articulos/<int:pk>/', ActualizarPaciente.as_view(), name='ver-actualizar-articulo'),
+    #path('login/', login_view, name='login'),
 ]
    
 
