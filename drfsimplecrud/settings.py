@@ -66,7 +66,7 @@ INSTALLED_APPS = [
     'login',
     'knox',
     'rest_framework_simplejwt',
-    
+    'soporte',
 ]
 
 MIDDLEWARE = [

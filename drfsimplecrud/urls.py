@@ -33,6 +33,8 @@ from django.urls import path
 from knox import views as knox_views
 from login.views import LoginAPI
 
+#asi deberia funcionar asi lo tengo la cosa es que no se quiere instalar
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('projects.urls')),
@@ -41,6 +43,7 @@ urlpatterns = [
     path('paciente/', include('apipaciente.urlspaciente')),
     path('especialidad/', include('apiespecialidad.urlsespecialidad')),
     path('ciudades/', include('ciudades.urlsciudad')),
+    path('soporte/', include('soporte.urls')),
     #path('consulta/', consulta_medicos, name='consulta_medicos'),
     path('cargar-datos/', cargar_datos_desde_json, name='cargar_datos'),
     path('eliminarPaciente/<int:pk>/', EliminarPaciente.as_view(), name='eliminar_mimodelo'),
