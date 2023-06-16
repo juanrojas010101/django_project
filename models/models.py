@@ -4,7 +4,7 @@ from django.db import models
 class Medico(models.Model):
     idMedico = models.AutoField(primary_key=True)
     NombreCompletoMed = models.CharField(max_length=90)
-    NumeroTarjetaMed = models.CharField(max_length=30)
+    NumeroTarjetaMed = models.CharField(max_length=50)
     cedulaMed = models.IntegerField(null=True)
     telefonoMed = models.CharField(max_length=10)
     correoMed = models.EmailField(null=True)
