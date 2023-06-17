@@ -8,7 +8,6 @@ class Paciente(models.Model):
     cedulaPac = models.IntegerField()
     telefonoPac = models.CharField(max_length=10)
     correoPac = models.EmailField()
-    direccionPac = models.CharField(max_length=50)
     ciudadPac = models.CharField(max_length=90)
 
 
