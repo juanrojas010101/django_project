@@ -9,7 +9,7 @@ class Paciente(models.Model):
     telefonoPac = models.CharField(max_length=10)
     correoPac = models.EmailField(unique=True)
     ciudadPac = models.CharField(max_length=90)
-    ActivoPac = models.BooleanField(default=False)
+    ActivoPac = models.BooleanField()
 
 
 

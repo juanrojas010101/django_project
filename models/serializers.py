@@ -8,7 +8,7 @@ from .models import Medico
 class MedicoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Medico
-        fields = ('idMedico', 'cedulaMed', 'NombreCompletoMed', 'telefonoMed', 'correoMed', 'NumeroTarjetaMed', 'ciudadMed', 'especialidad', 'direccionConsultorio', 'IdEspecialidad', 'IdCiudad','HoraInicio', 'HoraFinal', 'FechasDisponibilidad', 'PerfilProfesional', 'Activo')
+        fields = ('idMedico', 'NombreCompletoMed', 'telefonoMed','NumeroTarjetaMed','cedulaMed','correoMed', 'ciudadMed', 'especialidad', 'direccionConsultorio', 'IdEspecialidad', 'IdCiudad','HoraInicio', 'HoraFinal', 'FechasDisponibilidad', 'PerfilProfesional', 'Activo')
 
 
 

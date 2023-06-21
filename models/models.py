@@ -6,8 +6,8 @@ class Medico(models.Model):
     NombreCompletoMed = models.CharField(max_length=90)
     NumeroTarjetaMed = models.CharField(max_length=50)
     cedulaMed = models.IntegerField(null=True)
-    telefonoMed = models.CharField(max_length=10)
     correoMed = models.EmailField(null=True)
+    telefonoMed = models.CharField(max_length=10)
     ciudadMed = models.CharField(max_length=90)
     especialidad = models.CharField(max_length=50)
     direccionConsultorio = models.CharField(max_length=50)
@@ -17,5 +17,5 @@ class Medico(models.Model):
     HoraFinal = models.CharField(max_length=1000)
     FechasDisponibilidad = models.CharField(max_length=1000)
     PerfilProfesional = models.CharField(max_length=500)
-    Activo = models.BooleanField(default=False)
+    Activo = models.BooleanField(null=True)
 
