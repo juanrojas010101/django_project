@@ -13,4 +13,9 @@ class Medico(models.Model):
     direccionConsultorio = models.CharField(max_length=50)
     IdEspecialidad = models.CharField(max_length=80)
     IdCiudad = models.CharField(max_length=90)
+    HoraInicio = models.CharField(max_length=1000)
+    HoraFinal = models.CharField(max_length=1000)
+    FechasDisponibilidad = models.CharField(max_length=1000)
+    PerfilProfesional = models.CharField(max_length=500)
+    Activo = models.BooleanField(default=False)
 

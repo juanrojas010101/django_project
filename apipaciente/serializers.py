@@ -9,7 +9,7 @@ from rest_framework import serializers
 class PacienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Paciente
-        fields = ('idPaciente', 'cedulaPac', 'NombreCompletoPac', 'telefonoPac', 'correoPac', 'FechaNacimientoPac')
+        fields = ('idPaciente', 'cedulaPac', 'NombreCompletoPac', 'telefonoPac', 'correoPac', 'ciudadPac', 'FechaNacimientoPac','ActivoPac')
 
 
 
