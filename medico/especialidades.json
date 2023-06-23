@@ -1,0 +1,28 @@
+{
+    "opciones_especialidades": [    ["Anestesiología", "Anestesiología"],
+      ["Cardiología", "Cardiología"],
+      ["Dermatología", "Dermatología"],
+      ["Endocrinología", "Endocrinología"],
+      ["Gastroenterología", "Gastroenterología"],
+      ["Geriatría", "Geriatría"],
+      ["Ginecología", "Ginecología"],
+      ["Hematología", "Hematología"],
+      ["Infectología", "Infectología"],
+      ["Medicina del deporte", "Medicina del deporte"],
+      ["Medicina familiar y comunitaria", "Medicina familiar y comunitaria"],
+      ["Medicina interna", "Medicina interna"],
+      ["Nefrología", "Nefrología"],
+      ["Neurología", "Neurología"],
+      ["Obstetricia", "Obstetricia"],
+      ["Oncología", "Oncología"],
+      ["Oftalmología", "Oftalmología"],
+      ["Ortopedia", "Ortopedia"],
+      ["Otorrinolaringología", "Otorrinolaringología"],
+      ["Pediatría", "Pediatría"],
+      ["Psiquiatría", "Psiquiatría"],
+      ["Radiología", "Radiología"],
+      ["Reumatología", "Reumatología"],
+      ["Salud pública", "Salud pública"],
+      ["Urología", "Urología"]
+    ]
+  }
