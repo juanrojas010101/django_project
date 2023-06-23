@@ -31,7 +31,8 @@ from django.urls import path
 #from login.views import LoginView
 from django.urls import path
 from knox import views as knox_views
-from login.views import LoginAPI
+from login.views import loginAPI
+from login.views import registerAPI
 
 #asi deberia funcionar asi lo tengo la cosa es que no se quiere instalar
 
@@ -52,9 +53,8 @@ urlpatterns = [
     path('articulos/<int:pk>/', ActualizarEspecialidad.as_view(), name='ver-actualizar-articulo'),
     path('eliminarMedico/<int:pk>/', EliminarMedico.as_view(), name='eliminar_mimodelo'),
     path('articulos/<int:pk>/', ActualizarPaciente.as_view(), name='ver-actualizar-articulo'),
-    # path('api/login/', LoginView.as_view(), name='login'),
-    # path('login/', include('login.urls')),
-    path('api/login/', LoginAPI.as_view(), name='login'),
+    path('api/register/', registerAPI.as_view(), name='register'),
+    path('api/login/', loginAPI.as_view(), name='login'),
     path('api/logout/', knox_views.LogoutView.as_view(), name='logout'),
     path('api/logoutall/', knox_views.LogoutAllView.as_view(), name='logoutall'),
 ]
