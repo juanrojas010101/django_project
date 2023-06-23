@@ -1,14 +1,4 @@
 from django.db import models
-import json
-
-with open('medico/especialidades.json', 'r') as f:
-     Especialidad = json.load(f)
-opciones_especialidades = Especialidad['opciones_especialidades']
-
-# Abre el archivo JSON y carga los datos
-with open('medico/ciudad.json', 'r') as file:
-    CiudadMed = json.load(file)
-ciudades = CiudadMed['ciudades']
 
 
 
