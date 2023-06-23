@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'projects',
-    'models',
     'apipaciente',
     'apiespecialidad',
     'corsheaders',
@@ -67,6 +66,7 @@ INSTALLED_APPS = [
     'knox',
     'rest_framework_simplejwt',
     'soporte',
+    'medico',
 ]
 
 MIDDLEWARE = [

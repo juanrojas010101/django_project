@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from apiespecialidad.views import EliminarEspecialidad
-from models.views import EliminarMedico
-from models.views import ActualizarMedico
+from medico.views import EliminarMedico
+from medico.views import ActualizarMedico
 from apipaciente.views import ActualizarPaciente
 from apipaciente.views import EliminarPaciente
 from apiespecialidad.views import ActualizarEspecialidad
@@ -38,7 +38,7 @@ from login.views import LoginAPI
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('projects.urls')),
-    path('models/', include('models.urlsModels')),
+    path('medico/', include('medico.urlsMedico')),
     path('agendar/', include('agendar.urls')),
     path('paciente/', include('apipaciente.urlspaciente')),
     path('especialidad/', include('apiespecialidad.urlsespecialidad')),
