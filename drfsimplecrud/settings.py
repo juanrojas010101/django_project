@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'projects',
-    'apipaciente',
     'apiespecialidad',
     'corsheaders',
     'ciudades',
@@ -67,6 +66,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'soporte',
     'medico',
+    'paciente',
 ]
 
 MIDDLEWARE = [

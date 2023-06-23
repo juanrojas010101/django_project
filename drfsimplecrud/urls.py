@@ -18,8 +18,8 @@ from django.urls import path, include
 from apiespecialidad.views import EliminarEspecialidad
 from medico.views import EliminarMedico
 from medico.views import ActualizarMedico
-from apipaciente.views import ActualizarPaciente
-from apipaciente.views import EliminarPaciente
+from paciente.views import ActualizarPaciente
+from paciente.views import EliminarPaciente
 from apiespecialidad.views import ActualizarEspecialidad
 from ciudades.views import cargar_datos_desde_json
 #from models import views
@@ -41,10 +41,10 @@ urlpatterns = [
     path('', include('projects.urls')),
     path('medico/', include('medico.urlsMedico')),
     path('agendar/', include('agendar.urls')),
-    path('paciente/', include('apipaciente.urlspaciente')),
     path('especialidad/', include('apiespecialidad.urlsespecialidad')),
     path('ciudades/', include('ciudades.urlsciudad')),
     path('soporte/', include('soporte.urls')),
+    path('paciente/', include('paciente.urlspac')),
     #path('consulta/', consulta_medicos, name='consulta_medicos'),
     path('cargar-datos/', cargar_datos_desde_json, name='cargar_datos'),
     path('eliminarPaciente/<int:pk>/', EliminarPaciente.as_view(), name='eliminar_mimodelo'),
