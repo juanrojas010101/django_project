@@ -17,7 +17,7 @@ class Agendar(models.Model):
     Motivo = models.TextField()
     Hora = models.TimeField(unique_for_date='Fecha')
     Tipodeconsulta = models.CharField(max_length=80)
-    Estados = models.CharField(max_length=30)
+    Estados = models.CharField(max_length=50)
     
     # def clean(self):
     #     super().clean()
