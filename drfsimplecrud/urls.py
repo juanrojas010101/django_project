@@ -33,12 +33,14 @@ from django.urls import path
 from knox import views as knox_views
 from login.views import loginAPI
 from login.views import registerAPI
+from archivos import views
 
 #asi deberia funcionar asi lo tengo la cosa es que no se quiere instalar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('projects.urls')),
+    path('api/archivos/', views.ArchivoView.as_view(), name='api-archivos'),
     path('medico/', include('medico.urlsMedico')),
     path('agendar/', include('agendar.urls')),
     path('especialidad/', include('apiespecialidad.urlsespecialidad')),

@@ -6,4 +6,4 @@ from .models import Agendar
 class AgendarSerializer(serializers.ModelSerializer):
     class Meta:
         model = Agendar
-        fields = ('Fecha', 'Motivo', 'Hora', 'Tipodeconsulta', 'IdEspecialista','IdMedico')
+        fields = ('Fecha', 'Motivo', 'Hora', 'Tipodeconsulta', 'IdEspecialista','IdMedico', 'Estados')

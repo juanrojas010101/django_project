@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'soporte',
     'medico',
     'paciente',
+    'archivos',
 ]
 
 MIDDLEWARE = [
@@ -171,3 +172,6 @@ REST_FRAMEWORK = {
     'rest_framework_simplejwt.authentication.JWTAuthentication',
 ),
 }
+
+MEDIA_URL = 'archivos/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
