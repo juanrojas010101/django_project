@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     'medico',
     'paciente',
     'archivos',
+    'tempus_dominus',
 ]
 
 MIDDLEWARE = [
