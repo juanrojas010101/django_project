@@ -82,7 +82,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.csrf_middleware.CSRFExemptMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',  # Mantén este middleware para la protección CSRF general
+    'django.views.decorators.csrf.csrf_exempt',
 ]
 
 ROOT_URLCONF = 'drfsimplecrud.urls'
