@@ -9,6 +9,7 @@ def validate_future_date(value):
         raise ValidationError("La fecha debe ser válida.")
 
 class Agendar(models.Model):
+    IdCita = models.AutoField(primary_key=True, default=None)
     IdEspecialista = models.CharField(max_length=90)
     IdMedico = models.CharField(max_length=90)
     Fecha = models.DateField()
@@ -16,6 +17,7 @@ class Agendar(models.Model):
     Hora = models.TimeField()
     Tipodeconsulta = models.CharField(max_length=80)
     Estados = models.CharField(max_length=80)
+    IdPaciente = models.CharField(max_length=80)
 
     def clean(self):
         super().clean()
