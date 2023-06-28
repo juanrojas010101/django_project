@@ -7,4 +7,4 @@ class EspecialidadSerializer(serializers.ModelSerializer):
     especialidad = serializers.ChoiceField(choices=opciones_especialidades)
     class Meta:
         model = Especialidad
-        fields = ('codEspecialidad', 'especialidad', 'guidEspecialista')
+        fields = ('codEspecialidad', 'especialidad')

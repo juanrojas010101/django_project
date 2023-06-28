@@ -1,5 +1,5 @@
 from django.db import models
-
+import uuid
 
 
 class MedicoM(models.Model):
@@ -17,5 +17,6 @@ class MedicoM(models.Model):
     FechasDisponibilidad = models.CharField(max_length=1000, null=True, blank=True)
     PerfilProfesional = models.CharField(max_length=500, null=True, blank=True)
     Activo = models.BooleanField(null=True, blank=True)
+    guidEspecialista = models.UUIDField(default=uuid.uuid4, editable=False)
 
 
