@@ -10,7 +10,6 @@ def validate_future_date(value):
 
 class Agendar(models.Model):
     IdCita = models.AutoField(primary_key=True, default=None)
-    IdEspecialista = models.CharField(max_length=90)
     IdMedico = models.CharField(max_length=90)
     Fecha = models.DateField()
     Motivo = models.TextField()
