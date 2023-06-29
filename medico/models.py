@@ -18,5 +18,6 @@ class MedicoM(models.Model):
     PerfilProfesional = models.CharField(max_length=500, null=True, blank=True)
     Activo = models.BooleanField(null=True, blank=True)
     guidEspecialista = models.UUIDField(default=uuid.uuid4, editable=False)
+    fotoPerfil = models.CharField(max_length=500)
 
 
