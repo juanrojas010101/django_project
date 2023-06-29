@@ -1,6 +1,7 @@
 from django.db import models
 import uuid
-
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 
 class MedicoM(models.Model):
     IdMedico = models.AutoField(primary_key=True)
@@ -17,7 +18,11 @@ class MedicoM(models.Model):
     FechasDisponibilidad = models.CharField(max_length=1000, null=True, blank=True)
     PerfilProfesional = models.CharField(max_length=500, null=True, blank=True)
     Activo = models.BooleanField(null=True, blank=True)
-    guidEspecialista = models.UUIDField(default=uuid.uuid4, editable=False)
+    guidEspecialista = models.UUIDField(blank=True)
     fotoPerfil = models.CharField(max_length=500)
 
+@receiver(pre_save, sender=MedicoM)
+def generate_guid_especialista(sender, instance, **kwargs):
+    if not instance.guidEspecialista:  # Genera un nuevo GUID solo si no está definido
+        instance.guidEspecialista = uuid.uuid4()
 
